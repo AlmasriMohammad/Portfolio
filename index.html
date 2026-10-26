@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Almasri | Computer & Embedded Systems Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #1e293b, #0f172a);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text-primary);
+        }
+        header p {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .tags {
+            margin-top: 1rem;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #0f172a;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid var(--border);
+        }
+        .btn-container {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .btn {
+            background-color: var(--accent);
+            color: var(--bg-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mohammad Almasri</h1>
+        <p>Computer Engineering Graduate | Embedded Firmware & Hardware Systems</p>
+        <div class="btn-container">
+            <a href="mailto:your.email@domain.com" class="btn">Contact Me</a>
+            <a href="https://github.com/yourusername" target="_blank" class="btn btn-outline">GitHub Profile</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Concordia University Computer Engineering graduate (OIQ CPI eligible) with a DEC in Electronics Engineering Technology from Vanier College. Specialized in low-level C/C++ firmware development, ARM Cortex-M microcontrollers, RTOS principles, and benchtop hardware debugging using laboratory instruments (oscilloscopes, logic analyzers).</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Featured Projects</h2>
+            
+            <div class="card">
+                <h3>Embedded C / STM32 Firmware & Sensor Interfacing</h3>
+                <p>Developed bare-metal and FreeRTOS-based firmware routines interfacing peripheral sensors over SPI, I2C, and UART protocols. Implemented interrupt-driven state machines and Python scripts for automated serial data validation and hardware stress testing.</p>
+                <div class="tags">
+                    <span class="tag">C/C++</span>
+                    <span class="tag">ARM Cortex-M</span>
+                    <span class="tag">FreeRTOS</span>
+                    <span class="tag">SPI / I2C / UART</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Hardware Bring-Up & Lab Diagnostics (Capstone / Lab Project)</h3>
+                <p>Conducted end-to-end schematic analysis, PCB power rail verification, and physical debugging on microcontroller hardware testbeds using digital storage oscilloscopes and logic analyzers to isolate signal integrity issues.</p>
+                <div class="tags">
+                    <span class="tag">Hardware Debugging</span>
+                    <span class="tag">Oscilloscopes</span>
+                    <span class="tag">Schematic Capture</span>
+                    <span class="tag">Signal Integrity</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Credentials -->
+        <section>
+            <h2>Education & Credentials</h2>
+            <div class="card">
+                <h3>B.Eng. in Computer Engineering</h3>
+                <p><strong>Concordia University, Montreal</strong> | Eligible for CPI Registration (Ordre des ingénieurs du Québec - OIQ)</p>
+            </div>
+            <div class="card">
+                <h3>DEC in Electronics Engineering Technology</h3>
+                <p><strong>Vanier College, Montreal</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mohammad Almasri. Built with GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
