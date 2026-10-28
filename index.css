@@ -147,7 +147,8 @@ h3 {
     font-size: var(--font-size-huge);
     font-weight: 600;
     background: linear-gradient(135deg, #ffffff 0%, var(--accent-primary) 100%);
-    -webkit-background-clip: text;
+    background-clip: text;                  
+    -webkit-background-clip: text;          
     -webkit-text-fill-color: transparent;
 }
 
