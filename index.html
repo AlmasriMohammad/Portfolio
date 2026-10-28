@@ -45,8 +45,7 @@
   <main role="main">
 
     <!-- ***** Work / Projects ***** -->
-
-    <section class="work" id="work">
+   <section class="work" id="work">
       <div class="row">
         <h2>Featured Projects</h2>
         <div class="work__boxes">
@@ -56,40 +55,90 @@
             <div class="work__text">
               <h3>ECG-Based Spinal Cord Injury Monitoring & Prediction System</h3>
               <p>
-                Capstone & Clinical Research project at Hôpital du Sacré-Cœur-de-Montréal. Developed a multichannel ECG acquisition system using the ADS1293 analog front end, custom schematic/PCB design in KiCad, and Python/PyTorch machine learning models for SCI severity prediction.
+                Capstone & Clinical Research project at Hôpital du Sacré-Cœur-de-Montréal. 
+                Developed a multichannel ECG acquisition system using the ADS1293 custom PCB analog front end in KiCad, 
+                and Python machine learning models integration for SCI severity prediction. 
+                Machine contains RASP operating system with application to perform patient anaysis using model.
+                The device is built in a secure compact 3D printed enclosure.
               </p>
               <ul class="work__list">
-                <li>Embedded C/C++</li>
+                <li>Embedded System Design</li>
+                <li>Raspberry Pi</li>
+                <li>PCB Design</li>
+                <li>Hardware Design</li>
                 <li>KiCad</li>
-                <li>Python & PyTorch</li>
-                <li>Biomedical Signal Processing</li>
+                <li>Soldering</li>
+                <li>Hardware Prototyting</li>
+                <li>Python</li>
+                <li>Machine Learning</li>
+                <li>PyTorch</li>
+                <li>NumPy</li>
+                <li>OpenCV</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>NeuroKit</li>
+                <li>Object Oriented Programming</li>
+                <li>Signal Processing</li>
+                <li>Feature Extraction</li>
+                <li>3D printing</li>
+                <li>AutoCAD</li>
               </ul>
-
             </div>
             <div class="work__image-box">
-              <img src="Placeholder.webp" class="work__image" alt="Project 1" />
+              <img src="/images/attestation.png" class="work__image" alt="Project 1" />
             </div>
           </div>
 
-          <!-- Project 2: RTOS Vending Machine -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>RTOS Vending Machine Controller</h3>
-              <p>
-                Implemented a responsive embedded application on the Explorer 16/32 board with a PIC32 PIM microcontroller. Utilized RTOS task architecture with mutex-protected getters/setters, ISR queues, and a serial technician maintenance terminal.
-              </p>
-              <ul class="work__list">
-                <li>RTOS / FreeRTOS</li>
-                <li>Embedded C/C++</li>
-                <li>PIC32 / Explorer 16/32</li>
-                <li>Serial Communication</li>
-              </ul>
+        <!-- Project 2: RTOS Vending Machine -->
+        <div class="work__box">
+        <div class="work__text">
+            <h3>RTOS Vending Machine Controller</h3>
+            <p>
+            Implemented a real-time embedded application on the Explorer 16/32 board with a PIC32 PIM microcontroller. 
+            Utilized RTOS task architecture with mutex-protected getters/setters, ISR queues, and a serial technician maintenance terminal.
+            </p>
+            <ul class="work__list">
+            <li>RTOS architecture</li>
+            <li>FreeRTOS</li>
+            <li>Hardware Simulation</li>
+            <li>Embedded Progamming C/C++</li>
+            <li>PIC32 / Explorer 16/32</li>
+            <li>LCD Display</li>
+            <li>Interrupt Service Routine (ISR)</li>
+            <li>Serial Communication</li>
+            </ul>
+        </div>
+        <div class="work__image-box">
+            <!-- Slider Container -->
+            <div class="slider-container">
+            <div class="slider">
+                <div class="slide fade">
+                <img src="images/pic1.png" alt="Project View 1" onclick="openModal(this)">
+                </div>
+                <div class="slide fade">
+                <img src="images/pic2.png" alt="Project View 2" onclick="openModal(this)">
+                </div>
+                <div class="slide fade">
+                <img src="images/pic3.png" alt="Project View 3" onclick="openModal(this)">
+                </div>
+            </div>
 
+            <!-- Navigation Dots -->
+            <div class="slider-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-            <div class="work__image-box">
-              <img src="Placeholder.webp" class="work__image" alt="Project 2" />
             </div>
-          </div>
+        </div>
+        </div>
+
+        <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <a class="modal-prev" onclick="changeModalSlide(-1)">&#10094;</a>
+        <a class="modal-next" onclick="changeModalSlide(1)">&#10095;</a>
+        <img class="modal-content" id="modalImg" alt="Enlarged Project View">
+        </div>
 
           <!-- Project 3: CNC Laser Machine -->
           <div class="work__box">
@@ -104,34 +153,19 @@
                 <li>Autodesk Eagle</li>
                 <li>PCB Design</li>
               </ul>
-
             </div>
-            <div class="work__image-box">
-              <img src="Placeholder.webp" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-
-          <!-- Project 4: Computer Vision Robot Car -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>BeagleBone Black Computer Vision Robot</h3>
-              <p>
-                Programmed a robotic vehicle using a BeagleBone Black single-board computer, leveraging Python, OpenCV (cv2), and NumPy for real-time visual tracking of an orange target.
-              </p>
-              <ul class="work__list">
-                <li>BeagleBone Black</li>
-                <li>Python</li>
-                <li>OpenCV & NumPy</li>
-                <li>Image Processing</li>
-              </ul>
-
-            </div>
-            <div class="work__image-box">
-              <img src="Placeholder.webp" class="work__image" alt="Project 4" />
+            <div class="work__image-box" style="position: relative; width: 100%; max-width: 620px; padding-bottom: 498px; height: 0; overflow: hidden; border-radius: 8px; margin: 0 auto;">
+              <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+                      src="https://www.youtube-nocookie.com/embed/atXGpSnGLo0" 
+                      title="CNC Laser Machine Demo" 
+                      referrerpolicy="strict-origin-when-cross-origin" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
             </div>
           </div>
 
-    <!-- Project 5: Autonomous Hovercraft -->
+          <!-- Project 4: Autonomous Hovercraft -->
           <div class="work__box">
             <div class="work__text">
               <h3>Autonomous Hovercraft</h3>
@@ -144,11 +178,39 @@
                 <li>Real-time Navigation</li>
               </ul>
             </div>
-            <div class="work__image-box">
-              <video class="work__image" controls autoplay muted loop style="width: 100%; height: 600px; object-fit: cover; border-radius: 8px;">
-                <source src="./images/hovercraft.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+            <div class="work__image-box" style="position: relative; width: 100%; max-width: 620px; padding-bottom: 498px; height: 0; overflow: hidden; border-radius: 8px; margin: 0 auto;">
+              <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+                      src="https://www.youtube-nocookie.com/embed/dyHxy5IMIRg" 
+                      title="Autonomous Hovercraft Demo" 
+                      referrerpolicy="strict-origin-when-cross-origin" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Project 5: Computer Vision Robot Car -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>BeagleBone Black Computer Vision Robot</h3>
+              <p>
+                Programmed a robotic vehicle using a BeagleBone Black single-board computer, leveraging Python, OpenCV (cv2), and NumPy for real-time visual tracking of an orange target.
+              </p>
+              <ul class="work__list">
+                <li>BeagleBone Black</li>
+                <li>Python</li>
+                <li>OpenCV & NumPy</li>
+                <li>Image Processing</li>
+              </ul>
+            </div>
+            <div class="work__image-box" style="width: 100%; max-width: 620px; max-height: 480px; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 8px; margin: 0 auto;">
+              <iframe style="width: 100%; height: 100%; border: none;" 
+                      src="https://www.youtube-nocookie.com/embed/MuAeckHWE1E" 
+                      title="Computer Vision Robot Demo" 
+                      referrerpolicy="strict-origin-when-cross-origin" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
             </div>
           </div>
 
@@ -157,7 +219,6 @@
     </section>
 
     <!-- ***** Experience / Organizations ***** -->
-
     <section class="client" id="experience">
       <div class="row">
         <h2>Professional Experience & Research</h2>
@@ -191,7 +252,7 @@
           </div>
 
           <div class="about__photo-container">
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="Mohammad Almasri" />
+            <img class="about__photo" src="Placeholder.webp" alt="Mohammad Almasri" />
           </div>
         </div>
       </div>
@@ -199,7 +260,6 @@
   </main>
 
   <!-- ***** Contact ***** -->
-
   <section class="contact" id="contact">
     <div class="row">
       <h2>Get in Touch</h2>
@@ -213,7 +273,6 @@
   </section>
 
   <!-- ***** Footer ***** -->
-
   <footer role="contentinfo" class="footer">
     <div class="row">
       <ul class="footer__social-links">
